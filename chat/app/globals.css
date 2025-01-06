@@ -1,42 +1,124 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url('/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.page-header {
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0 20px;
+
+  display: flex;
+  /* 主軸對齊方式 */
+  justify-content: space-between;
+
+  /* logo 垂直對齊 */
+  align-items: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.header-nav {
+  display: flex;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.header-nav li a {
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.header-nav li:last-child a {
+  margin-right: 0px;
+}
+
+.page-content {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.content-nav {
+  width: 1000px;
+  height: 300px;
+
+  /* 水平垂直居中 搭配父容器 display: flex; eight: calc(100vh - 70px); */
+  margin: auto;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content-nav .item {
+  width: 180px;
+  height: 200px;
+  background-color: orange;
+
+  display: flex;
+  flex-direction: column;
+
+  /* 元素在側軸方向如果不給高度 默認是 stretch(填滿整個容器高度) */
+  align-items: center;
+  justify-content: space-evenly;
+
+  transition: 0.2s linear;
+
+  cursor: pointer;
+}
+
+.content-nav .item:hover {
+  box-shadow: 0px 0px 20px black;
+}
+
+.content-nav .item span {
+  font-size: 20px;
+  color: white;
+}
+
+.content-nav .item:nth-child(1) {
+  background-color: #595ca8;
+}
+
+.content-nav .item:nth-child(2) {
+  background-color: #595ca8;
+
+}
+
+.content-nav .item:nth-child(3) {
+  background-color: #595ca8;
+
+}
+
+.content-nav .item:nth-child(4) {
+  background-color: #595ca8;
+
+}
+
+.content-nav .item:nth-child(5) {
+  background-color: #595ca8;
+
 }

@@ -1,0 +1,14 @@
+.pd p {
+    /* 水平置中 */
+    text-align: center; 
+    color: red;
+}
+
+/* box-sizing: content-box; 
+   這個是預設屬性，就是我們一般作用得模式 */
+/* box-sizing: border-box; 
+   用這個屬性的話，就會把 padding 等地考慮進來，而自動做內縮調整 */
+
+/* 「relative 相對定位」的效果是將設定的物件，將其參考空間參考自身[原始]的資料流位置 */
+/* 子絕對定位 父相對定位 */
+
